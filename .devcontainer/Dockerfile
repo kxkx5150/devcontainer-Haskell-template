@@ -67,9 +67,9 @@ RUN mkdir -p /home/${USERNAME}/workspace
 WORKDIR /home/${USERNAME}/workspace
 
 
-RUN mkdir -p "$HOME/.ghcup/bin" \
-    && curl -LJ "https://downloads.haskell.org/~ghcup/x86_64-linux-ghcup" -o "$HOME/.ghcup/bin/ghcup" \
-    && chmod +x "$HOME/.ghcup/bin/ghcup"
+RUN mkdir -p "/home/vscode/.ghcup/bin" \
+    && curl -LJ "https://downloads.haskell.org/~ghcup/x86_64-linux-ghcup" -o "/home/vscode/.ghcup/bin/ghcup" \
+    && chmod +x "/home/vscode/.ghcup/bin/ghcup"
 ENV PATH="/home/$USERNAME/.cabal/bin:/home/$USERNAME/.ghcup/bin:$PATH"
 
 # [Choice] GHC version: recommended, latest, 9.2, 9.0, 8.10, 8.8, 8.6
